@@ -6,13 +6,22 @@ export type FileDocument = File & Document;
 @Schema()
 export class File {
     @Prop()
-    content: string;
+    path: string;
+
+    @Prop()
+    name: string;
+
+    @Prop()
+    extension: string;
 
     @Prop()
     life_time: string;
 
     @Prop()
     private: boolean;
+
+    @Prop()
+    private_key: string;
 
     @Prop()
     numbers: boolean;

@@ -46,6 +46,11 @@ $ npm run start:prod
 ```
 
 ## NPM  
-@types/express  
 @nestjs/mongoose mongoose  
-@nestjs/config
+@nestjs/config  
+@nestjs/serve-static
+@types/express  
+@types/multer  
+uiid
+find-remove
+rimraf
