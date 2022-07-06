@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
-import Authorization from "@/components/pages/Authorization.vue";
+import Home from "@/components/pages/Home.vue";
 
 Vue.use(VueRouter)
 
@@ -8,12 +8,7 @@ const routes: Array<RouteConfig> = [
   {
     path: '/',
     name: 'home',
-    component: Authorization
-  },
-  {
-    path: '/login',
-    name: 'login',
-    component: Authorization
+    component: Home
   },
   // {
   //   path: '/about',

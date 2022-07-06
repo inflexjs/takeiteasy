@@ -1,0 +1,12 @@
+.params {
+    user-select: none;
+    &__options {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: toRem(86);
+        grid-row-gap: toRem(25);
+    }
+    &__button {
+        width: toRem(480);
+    }
+}

@@ -1,0 +1,39 @@
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: toRem(58);
+    line-height: toRem(40);
+    padding: 0 toRem(16);
+    border-radius: toRem(10);
+    box-sizing: border-box;
+    white-space: nowrap;
+    position: relative;
+    font-size: toRem(16);
+    font-weight: 500;
+    transition: 0.3s ease;
+    transition-property: background-color, opacity;
+
+    &--view {
+        &-primary {
+            background-color: $backgroundPrimary;
+            color: $textBase;
+        }
+    }
+
+    &.is-disabled {
+        opacity: 0.6;
+        pointer-events: none;
+    }
+
+    &:not(.is-disabled) {
+        &:hover {
+            &.button--view {
+                &-primary {
+                    background-color: $backgroundHover;
+                }
+            }
+        }
+    }
+}

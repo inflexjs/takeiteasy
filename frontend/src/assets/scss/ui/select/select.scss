@@ -1,0 +1,12 @@
+.select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: toRem(8) toRem(8) toRem(8) toRem(16);
+    background-color: $backgroundWhite;
+    border-radius: toRem(8);
+    box-shadow: 0 16px 24px rgba(2, 3, 3, 0.03), 0 6px 30px rgba(2, 3, 3, 0.02), 0 8px 10px rgba(2, 3, 3, 0.04);
+    &__label {
+        pointer-events: none;
+    }
+}

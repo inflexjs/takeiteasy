@@ -8,58 +8,59 @@ textarea,
 
 body {
     font-size: 14px;
-    color: #333333;
-    background-color: #0575E6;
+    color: $textPrimary;
+    background-color: $mainBackground;
     backface-visibility: hidden;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
     min-width: 320px;
+    cursor: url("/public/images/cursor/light/pointer.png") 6 10, auto;
 }
 
 html {
     font-size: 12px;
 
-    @media (min-width: $desktop) {
-        font-size: 1vw;
-    }
-
-    @media (min-width: $maxRems) {
-        font-size: 18px;
-    }
+    //@media (min-width: $desktop) {
+    //    font-size: 1vw;
+    //}
+    //
+    //@media (min-width: $maxRems) {
+    //    font-size: 14px;
+    //}
 }
 
-.layout {
-    min-height: 100vh;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    justify-content: space-between;
-
-    &__slot {
-        box-sizing: border-box;
-        display: flex;
-        flex-grow: 1;
-        flex-direction: column;
-        justify-content: space-between;
-
-        & > * {
-            display: flex;
-            flex-grow: 1;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        @media (max-width: $maxTablet) {
-            padding-top: $sidebarHeadHeight;
-        }
-    }
-
-    @media (min-width: $desktop) {
-        padding: 0 $sidebarWidthS;
-    }
-}
+//.layout {
+//    min-height: 100vh;
+//    display: flex;
+//    flex-grow: 1;
+//    flex-direction: column;
+//    justify-content: space-between;
+//
+//    &__slot {
+//        box-sizing: border-box;
+//        display: flex;
+//        flex-grow: 1;
+//        flex-direction: column;
+//        justify-content: space-between;
+//
+//        & > * {
+//            display: flex;
+//            flex-grow: 1;
+//            flex-direction: column;
+//            justify-content: space-between;
+//        }
+//
+//        @media (max-width: $maxTablet) {
+//            padding-top: $sidebarHeadHeight;
+//        }
+//    }
+//
+//    @media (min-width: $desktop) {
+//        padding: 0 $sidebarWidthS;
+//    }
+//}
 
 .container {
     box-sizing: border-box;
@@ -114,7 +115,6 @@ main {
 .button,
 button {
     border: none;
-    cursor: pointer;
     background: none;
     padding: 0;
     margin: 0;
@@ -171,4 +171,14 @@ textarea {
 
 .lazyloaded {
     opacity: 1;
+}
+
+a,
+button,
+.dropdown,
+.dropzone__value,
+input[type="file"],
+input,
+{
+    cursor: url("/public/images/cursor/light/link.png") 10 9, pointer;
 }

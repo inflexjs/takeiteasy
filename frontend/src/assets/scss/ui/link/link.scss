@@ -1,0 +1,62 @@
+.link {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    vertical-align: top;
+    transition: opacity 0.3s ease;
+
+    span {
+        transition: 0.3s ease;
+        transition-property: opacity, color, border-bottom-color;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: toRem(-4);
+        bottom: toRem(-4);
+        left: 0;
+        right: 0;
+    }
+
+    &.is-underline {
+        span {
+            border-bottom-color: transparent;
+            border-bottom-width: 1px;
+            border-style: solid;
+        }
+    }
+
+    &--size {
+        &-m {
+            font-size: toRem(15);
+        }
+    }
+
+    &--view {
+        &-primary {
+            span {
+                color: $textPrimary;
+                border-bottom-color: $textPrimary;
+            }
+        }
+    }
+
+    &.is-disabled {
+        opacity: 0.6;
+        pointer-events: none;
+    }
+
+    &:not(.is-disabled) {
+        &:hover {
+            &.link--view {
+                &-primary {
+                    span {
+                        color: $textHover;
+                        border-bottom-color: $textHover;
+                    }
+                }
+            }
+        }
+    }
+}

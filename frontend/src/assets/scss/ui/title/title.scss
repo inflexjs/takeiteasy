@@ -1,0 +1,12 @@
+.title {
+    text-align: center;
+    font-weight: 500;
+    font-size: toRem(32);
+    color: $textPrimary;
+    & > p {
+        margin-top: toRem(10);
+        font-weight: 400;
+        color: $textSecondary;
+        font-size: toRem(15);
+    }
+}
